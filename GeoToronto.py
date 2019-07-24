@@ -14,15 +14,14 @@ from mpl_toolkits.axes_grid.inset_locator import inset_axes
 import sys
 import os
 import zipfile
-import ogr2ogr
+import subprocess
 import json
 import shelve
-import pyproj
 
 
 class GeoToronto(object):
     def __init__(self):
-        self._data_path = "./geo_toronto"
+        self._data_path = "./data"
         self.json_file = self._get_data_files()
 
     def _get_data_files(self):
