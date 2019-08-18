@@ -59,7 +59,6 @@ class GeoToronto(object):
         except IOError:
             print('Folder already exists')
             pass
-
         zip_file = "./data/zoning_wgs84.zip"
         if not os.path.exists(zip_file):
             url = "http://opendata.toronto.ca/gcc/zoning_wgs84.zip"
@@ -81,7 +80,6 @@ class GeoToronto(object):
         ax.set_xlim(x1, x2)
         ax.set_ylim(y1, y2)
 
-
         fc = "#ffffff"
         ec = "#ff0000"
         z = 100
@@ -96,7 +94,6 @@ class GeoToronto(object):
                 print('Finish')
                 break
         return fig
-
 
 if __name__ == '__main__':
     geo_toronto = GeoToronto()
